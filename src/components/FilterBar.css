@@ -1,0 +1,54 @@
+.container-filters {
+	display: flex;
+	justify-content: center;
+
+	position: fixed;
+	top: 0;
+	left: -2000px;
+	width: 100%;
+
+	color: #555;
+	background-color: #f2f2f2;
+	height: 30%;
+	padding-top: 100px;
+	transition: all 0.3s linear;
+}
+
+.container{
+	padding: 30px 40px;
+}
+
+.container-filters.active {
+	left: 0;
+}
+
+.filter-by-type {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.filter-by-type span {
+	font-weight: 700;
+	font-size: 22px;
+	margin: 20px 0;
+}
+
+.filter{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.group-type {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	margin-left: 15px;
+}
+
+.group-type label {
+	cursor: pointer;
+}

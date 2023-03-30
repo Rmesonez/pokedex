@@ -1,0 +1,36 @@
+.trainer{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    color: #006d77;
+    text-shadow: 0 0 5px #069eac;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#dark .trainer{
+    color: #fff;
+    text-shadow: 0 0 5px #f3f3f3;
+}
+
+/* Btn Filter */
+.container-filter {
+	display: flex;
+}
+
+.icon-filter {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.icon-filter .icon {
+	width: 30px;
+	height: 30px;
+	stroke: #222;
+}
+

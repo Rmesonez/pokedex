@@ -1,0 +1,32 @@
+.App{
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.switch{
+	position: absolute;
+	right: 5%;
+	top: 33%;
+	display: flex;
+	align-items: center;
+	padding: 20px 10px;
+	width: 175px;
+	height: 55px;
+	cursor: pointer;
+	transition: all 0.3s linear;
+	z-index: 1;
+}
+
+.switch span {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: blue;
+	padding: 0 10px;
+}
+
+#dark .switch span {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: rgb(133, 5, 5);
+	padding: 0 10px;
+}
