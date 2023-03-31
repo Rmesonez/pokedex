@@ -35,7 +35,7 @@ body{
 	.number-pokemon {
 		position: absolute;
 		top: -90px;
-		left: -50%;
+		left: -20%;
 		font-size: 2.5rem;
 		font-weight: 700;
 		color: var(--color-primary-hover);
@@ -45,10 +45,10 @@ body{
 		order: 1;
 		padding: 25px 25px 0;
 		height: 200px;
-		width: 100%;
+		width: 200px;
 		position: absolute;
 		top: -60%;
-		left: -90%;
+		left: -30%;
 	}
 
 	.container-info-pokemon h1 {
