@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import { PokemonContext } from '../context/PokemonContext';
 import ReactPaginate from "react-paginate"
-import axios from 'axios'
 import Loader from '../components/Loader'
 import PokemonCard from '../components/PokemonCard'
 import './PokemonList.css'
@@ -9,45 +8,25 @@ import './PokemonList.css'
 const PokemonList = () => {
 
     const [loading, setLoading] = useState(false)
-    const { filteredPokemons } =
+    const { filteredPokemons, globalPokemons } =
 		useContext(PokemonContext);
 
     //all pokemons
-
-    const [allPokemons, setAllPokemons] = useState([]);
     const [ currentItems, setCurrentItems ] = useState([])
     const [ itemOffset, setItemOffset ] = useState(0)
     const [ pageCount, setPageCount ] = useState(0)
     const itemsPerPage = 14;
 
 
-    const getAllPokemons = () => {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=1261/')
-            .then(res => {
-                setAllPokemons(res?.data?.results)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
-
-    useEffect(() => {
-        setLoading(true)
-        getAllPokemons()
-        setLoading(false)
-    }, [])
-
-  
-
 //all pokemon pagination
   useEffect(() => {
         setLoading(true)
         const endOffset = itemOffset + itemsPerPage
-        const newCurrentItems = allPokemons?.slice(itemOffset, endOffset)
+        const newCurrentItems = globalPokemons?.slice(itemOffset, endOffset)
         setCurrentItems(newCurrentItems)
-        setPageCount(Math.ceil(allPokemons?.length / itemsPerPage))
+        setPageCount(Math.ceil(globalPokemons?.length / itemsPerPage))
         setLoading(false)
-    }, [itemOffset, allPokemons])
+    }, [itemOffset, globalPokemons])
 
   const handlePageClick = (e) => {
       const newOffset = e.selected * itemsPerPage

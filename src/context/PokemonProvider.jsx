@@ -21,7 +21,7 @@ export const PokemonProvider = ({ children }) => {
 
 	const getGlobalPokemons = () => {
 		const baseURL = 'https://pokeapi.co/api/v2/';
-		axios.get(`${baseURL}pokemon?limit=1261&offset=0`)
+		axios.get(`${baseURL}pokemon?limit=1261`)
 		.then(res => {
 			const promises = res?.data?.results?.map(pokemon => {
 				return axios.get(pokemon?.url)
