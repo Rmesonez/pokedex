@@ -34,8 +34,8 @@ body{
 
 	.number-pokemon {
 		position: absolute;
-		top: -80px;
-		left: -60%;
+		top: -90px;
+		left: -50%;
 		font-size: 2.5rem;
 		font-weight: 700;
 		color: var(--color-primary-hover);
