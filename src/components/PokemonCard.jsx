@@ -4,11 +4,11 @@ import axios from 'axios';
 import Loader from './Loader';
 import './PokemonCard.css'
 
- const PokemonCard = ({ pokemon }) => {
+const PokemonCard = ({ pokemon }) => {
 
 	const [pokemonData, setPokemonData] = useState(null);
 	const [loading, setLoading] = useState(false);
-	
+
 
 	useEffect(() => {
 		setLoading(true);
@@ -23,11 +23,12 @@ import './PokemonCard.css'
 			.finally(() => {
 				setLoading(false);
 			})
-	}, [])
+	}, [ pokemon?.url ])
 
 
 
 	return (
+		loading ? <Loader /> :
 		<Link to={
 			pokemonData ? `/pokemon/${pokemonData?.id}` : `/pokemon/${pokemon?.id}`} className='card-pokemon'>
 			<div className='card-img'>

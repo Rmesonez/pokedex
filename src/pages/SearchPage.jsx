@@ -13,7 +13,7 @@ const SearchPage = () => {
     const filteredPokemons = globalPokemons?.filter(pokemon =>
 		pokemon?.name.includes(location?.state.toLowerCase())
 	);
-	console.log(filteredPokemons)
+	
 
     function goBack() {
 		navigate('/home')
