@@ -29,7 +29,7 @@ const Header = () => {
 			<header className='container nav'>
 				<Link to='/home' className='logo'>
 					<img
-						src='https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png'
+						src='/Pokédex_logo.png'
 						alt='Logo Pokedex'
 					/>
 				</Link>
